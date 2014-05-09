@@ -37,3 +37,23 @@ Templates.todayTasks = [
 
 
     ].join("\n");
+
+
+Templates.completedTasks = [
+
+
+
+    "<% _.each(completeTask, function(completeTask, index, list) { %>",
+
+	"<li data-todayid=\"<%= completeTask._id %>\" data-index=\"<%= index %>\" class=\"toDoItem\"><div class=\"newCheck\"><span class=\"glyphicon glyphicon-ok finishedItem\"></span></div>",
+            
+	//"<li data-todayid=\"<%= newToDoInput._id %>\" data-index=\"<%= index %>\" class=\"toDoItem\"> <span class=\"glyphicon glyphicon-ok finishedItem\"></span><span class=\"glyphicon glyphicon-pencil editStuff\" data-toggle=\"modal\" data-target=\".bs-example-modal-sm\"></span>",
+
+    "<%= completeTask.task %>",
+     "</li>",
+
+
+    "<% }); %>"
+
+
+    ].join("\n");
